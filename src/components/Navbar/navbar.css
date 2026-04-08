@@ -1,0 +1,87 @@
+/* Variables */
+:root {
+    --green: #7ab317;
+    --lime: #c0d630;
+    --dark-bg: #1b3932;
+}
+
+/* General Styling */
+.icon-green {
+    color: var(--green);
+}
+
+.info-text {
+    font-size: 13px;
+    color: #666;
+}
+
+.top-links a {
+    text-decoration: none;
+    color: #444;
+    font-size: 13px;
+}
+
+/* Phone & Button */
+.phone-circle {
+    background: var(--lime);
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+}
+
+.btn-dark-green {
+    background: var(--dark-bg);
+    color: white;
+    border: none;
+    font-weight: 600;
+}
+
+/* --- Hover Dropdown Logic --- */
+@media (min-width: 992px) {
+    .nav-item.dropdown:hover>.dropdown-menu {
+        display: block;
+        margin-top: 0;
+    }
+
+    /* Multi-level Dropdown Styling */
+    .submenu-item {
+        position: relative;
+        padding: 8px 20px;
+        cursor: pointer;
+        color: #212529;
+    }
+
+    .submenu-item:hover {
+        background: #f8f9fa;
+        color: var(--green);
+    }
+
+    .nested-menu {
+        position: absolute;
+        left: 100%;
+        top: 0;
+        background: white;
+        list-style: none;
+        padding: 10px 0;
+        min-width: 180px;
+        display: none;
+    }
+
+    .submenu-item:hover .nested-menu {
+        display: block;
+    }
+
+    .nested-menu li {
+        padding: 8px 20px;
+        color: #212529;
+    }
+
+    .nested-menu li:hover {
+        background: #f8f9fa;
+        color: var(--green);
+    }
+}

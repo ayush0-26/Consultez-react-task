@@ -1,0 +1,170 @@
+.footer {
+  width: 100%;
+}
+
+/* WRAPPER */
+.footer-wrapper {
+  display: flex;
+}
+
+/* LEFT */
+.footer-left {
+  width: 70%;
+  background: #163839;
+  color: #fff;
+  padding: 60px;
+}
+
+/* TOP CONTACT */
+.footer-top {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+  padding-bottom: 30px;
+  margin-bottom: 40px;
+}
+
+.contact-item {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+
+.contact-item svg {
+  font-size: 20px;
+}
+
+.contact-item h6 {
+  margin: 0;
+  font-weight: bold;
+}
+
+/* GRID */
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 50px;
+}
+
+.footer-grid h4 {
+  margin-bottom: 20px;
+}
+
+.footer-grid ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-grid li {
+  margin-bottom: 10px;
+  color: #ccc;
+  cursor: pointer;
+}
+
+.footer-grid li:hover {
+  color: #c4d600;
+}
+
+/* NEWSLETTER */
+.footer-grid input {
+  width: 100%;
+  padding: 12px;
+  border-radius: 30px;
+  border: none;
+  margin-bottom: 15px;
+}
+
+.subscribe-btn {
+  width: 100%;
+  padding: 12px;
+  background: #c4d600;
+  border: none;
+  border-radius: 30px;
+  font-weight: bold;
+}
+
+/* SOCIAL */
+.social {
+  margin-top: 20px;
+  display: flex;
+  gap: 10px;
+}
+
+.social svg {
+  background: #214b4c;
+  padding: 10px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+/* COPYRIGHT */
+.footer-bottom {
+  margin-top: 40px;
+  border-top: 1px solid rgba(255,255,255,0.1);
+  padding-top: 20px;
+  color: #aaa;
+}
+
+.footer-bottom span {
+  color: #c4d600;
+}
+
+/* RIGHT */
+.footer-right {
+  width: 30%;
+  background: #c4d600;
+  padding: 60px;
+  text-align: center;
+  position: relative;
+}
+
+.footer-right h2 {
+  font-size: 32px;
+  margin-bottom: 40px;
+}
+
+/* CIRCLE BUTTON */
+.circle-btn {
+  width: 180px;
+  height: 180px;
+  background: #163839;
+  color: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* TIME */
+.time {
+  margin-top: 40px;
+  font-weight: bold;
+}
+
+.time span {
+  font-weight: normal;
+}
+
+/* RESPONSIVE */
+@media (max-width: 992px) {
+  .footer-wrapper {
+    flex-direction: column;
+  }
+
+  .footer-left,
+  .footer-right {
+    width: 100%;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-top {
+    flex-direction: column;
+    gap: 20px;
+  }
+}
