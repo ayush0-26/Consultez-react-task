@@ -3,6 +3,7 @@ import { Navbar, Nav, NavDropdown, Container } from 'react-bootstrap';
 import { FaEnvelope, FaMapMarkerAlt, FaPhoneAlt, FaFacebookF, FaInstagram, FaTwitter, FaLinkedinIn, FaAngleRight } from 'react-icons/fa';
 import './navbar.css';
 import logoImg from "../../assets/logo.png";
+import { Link } from "react-router-dom";
 const Header = () => {
     return (
         <header className="fixed-top shadow-sm">
@@ -29,21 +30,23 @@ const Header = () => {
             {/* --- MAIN NAVBAR Section --- */}
             <Navbar bg="white" expand="lg" className="main-navbar py-3">
                 <Container fluid className="px-5">
-                  <Navbar.Brand href="#home">
-            <img
-              src={logoImg} // Import ki hui image yahan use karein
-              alt="Consultez Logo"
-              height="35" // Logo ki height adjust karein image ke hisaab se
-              className="d-inline-block align-top"
-            />
-          </Navbar.Brand>
+                    <Navbar.Brand href="#home">
+                        <img
+                            src={logoImg} // Import ki hui image yahan use karein
+                            alt="Consultez Logo"
+                            height="35" // Logo ki height adjust karein image ke hisaab se
+                            className="d-inline-block align-top"
+                        />
+                    </Navbar.Brand>
 
                     <Navbar.Toggle aria-controls="header-nav" />
 
                     <Navbar.Collapse id="header-nav">
                         <Nav className="mx-auto fw-bold custom-nav">
                             <NavDropdown title="Home" id="home-drop">
-                                <NavDropdown.Item>Home Page 01</NavDropdown.Item>
+                                <NavDropdown.Item as={Link} to="/">
+                                    Home Page 01
+                                </NavDropdown.Item>
                                 <NavDropdown.Item>Home Page 02</NavDropdown.Item>
                                 <NavDropdown.Item>Home Page 03</NavDropdown.Item>
                                 <NavDropdown.Item>Home Page 04</NavDropdown.Item>
@@ -82,7 +85,9 @@ const Header = () => {
 
                             {/* Multi-level Dropdown (Pages) */}
                             <NavDropdown title="Pages" id="pages-drop" className="has-submenu">
-                                <NavDropdown.Item>About</NavDropdown.Item>
+                                <NavDropdown.Item as={Link} to="/about">
+                                    About
+                                </NavDropdown.Item>
                                 <NavDropdown.Item>Faq</NavDropdown.Item>
                                 <NavDropdown.Item>Pricing</NavDropdown.Item>
                                 <div className="submenu-item">
